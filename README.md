@@ -73,7 +73,8 @@ project/
 .env
 ```
 
-2、添加下面字段，并写入自己的api key
+2、添加下面字段
+
 DEEPSEEK_API_KEY={此处连同花括号一起替换为你自己的apikey}
 
 在项目根目录执行：
