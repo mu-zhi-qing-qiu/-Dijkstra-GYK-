@@ -1,0 +1,157 @@
+[PASS] Dijkstra case 1
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 8.64 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 176.43}
+[PASS] Floyd case 1
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 5.01 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 176.43}
+[PASS] Compare case 1
+       request: {'start': 1, 'end': 33, 'mode': 'walk', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=2.10 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 176.43}
+       floyd:    status=200, elapsed=4.39 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 176.43}
+[PASS] Dijkstra case 2
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.83 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Floyd case 2
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 4.70 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Compare case 2
+       request: {'start': 1, 'end': 33, 'mode': 'bike', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=3.18 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+       floyd:    status=200, elapsed=24.53 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Dijkstra case 3
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 12.76 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Floyd case 3
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 4.68 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Compare case 3
+       request: {'start': 1, 'end': 33, 'mode': 'bike', 'period': 'normal', 'strategy': 'time'}
+       dijkstra: status=200, elapsed=26.24 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+       floyd:    status=200, elapsed=18.40 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 54.89}
+[PASS] Dijkstra case 4
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.47 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 74.1}
+[PASS] Floyd case 4
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 3.94 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 74.1}
+[PASS] Compare case 4
+       request: {'start': 1, 'end': 33, 'mode': 'bike', 'period': 'morning_peak', 'strategy': 'time'}
+       dijkstra: status=200, elapsed=20.54 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 74.1}
+       floyd:    status=200, elapsed=18.20 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 74.1}
+[PASS] Dijkstra case 5
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.23 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 65.87}
+[PASS] Floyd case 5
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 3.85 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 65.87}
+[PASS] Compare case 5
+       request: {'start': 1, 'end': 33, 'mode': 'bike', 'period': 'lunch_peak', 'strategy': 'time'}
+       dijkstra: status=200, elapsed=21.11 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 65.87}
+       floyd:    status=200, elapsed=4.36 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 65.87}
+[PASS] Dijkstra case 6
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.19 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 71.36}
+[PASS] Floyd case 6
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 26.25 ms
+       json: {'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 71.36}
+[PASS] Compare case 6
+       request: {'start': 1, 'end': 33, 'mode': 'bike', 'period': 'evening_peak', 'strategy': 'time'}
+       dijkstra: status=200, elapsed=1.93 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 71.36}
+       floyd:    status=200, elapsed=4.09 ms, json={'path': [1, 19, 18, 33], 'path_names': ['东大门', '明德楼', '至善楼', '图书馆'], 'distance': 247.0, 'time': 71.36}
+[PASS] Dijkstra case 7
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 1.99 ms
+       json: {'path': [0, 11, 12, 17, 16, 15, 14, 13, 29, 28, 33], 'path_names': ['西大门', '学思苑J', '学思苑K', '集贤苑E', '集贤苑D', '集贤苑C', '集贤苑B', '集贤苑A', '游泳馆', '篮球馆', '图书馆'], 'distance': 539.0, 'time': 119.78}
+[PASS] Floyd case 7
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 4.29 ms
+       json: {'path': [0, 11, 12, 17, 16, 15, 14, 13, 29, 28, 33], 'path_names': ['西大门', '学思苑J', '学思苑K', '集贤苑E', '集贤苑D', '集贤苑C', '集贤苑B', '集贤苑A', '游泳馆', '篮球馆', '图书馆'], 'distance': 539.0, 'time': 119.78}
+[PASS] Compare case 7
+       request: {'start': 0, 'end': 33, 'mode': 'bike', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=13.69 ms, json={'path': [0, 11, 12, 17, 16, 15, 14, 13, 29, 28, 33], 'path_names': ['西大门', '学思苑J', '学思苑K', '集贤苑E', '集贤苑D', '集贤苑C', '集贤苑B', '集贤苑A', '游泳馆', '篮球馆', '图书馆'], 'distance': 539.0, 'time': 119.78}
+       floyd:    status=200, elapsed=4.71 ms, json={'path': [0, 11, 12, 17, 16, 15, 14, 13, 29, 28, 33], 'path_names': ['西大门', '学思苑J', ' 学思苑K', '集贤苑E', '集贤苑D', '集贤苑C', '集贤苑B', '集贤苑A', '游泳馆', '篮球馆', '图书馆'], 'distance': 539.0, 'time': 119.78}
+[PASS] Dijkstra case 8
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 26.74 ms
+       json: {'path': [2, 18, 33, 28, 29, 13, 14, 15, 16, 17], 'path_names': ['学思苑A', '至善楼', '图书馆', '篮球馆', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E'], 'distance': 521.0, 'time': 372.14}
+[PASS] Floyd case 8
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 16.07 ms
+       json: {'path': [2, 18, 33, 28, 29, 13, 14, 15, 16, 17], 'path_names': ['学思苑A', '至善楼', '图书馆', '篮球馆', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E'], 'distance': 521.0, 'time': 372.14}
+[PASS] Compare case 8
+       request: {'start': 2, 'end': 17, 'mode': 'walk', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=2.26 ms, json={'path': [2, 18, 33, 28, 29, 13, 14, 15, 16, 17], 'path_names': ['学思苑A', '至善楼', '图书 馆', '篮球馆', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E'], 'distance': 521.0, 'time': 372.14}
+       floyd:    status=200, elapsed=3.85 ms, json={'path': [2, 18, 33, 28, 29, 13, 14, 15, 16, 17], 'path_names': ['学思苑A', '至善楼', '图书 馆', '篮球馆', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E'], 'distance': 521.0, 'time': 372.14}
+[PASS] Dijkstra case 9
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.55 ms
+       json: {'path': [26, 29, 13, 14, 15, 16, 17, 10, 35], 'path_names': ['田径场', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集 贤苑E', '学思苑I', '桃蹊饭堂'], 'distance': 363.0, 'time': 259.29}
+[PASS] Floyd case 9
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 22.66 ms
+       json: {'path': [26, 29, 13, 14, 15, 16, 17, 10, 35], 'path_names': ['田径场', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集 贤苑E', '学思苑I', '桃蹊饭堂'], 'distance': 363.0, 'time': 259.29}
+[PASS] Compare case 9
+       request: {'start': 26, 'end': 35, 'mode': 'walk', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=3.47 ms, json={'path': [26, 29, 13, 14, 15, 16, 17, 10, 35], 'path_names': ['田径场', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E', '学思苑I', '桃蹊饭堂'], 'distance': 363.0, 'time': 259.29}
+       floyd:    status=200, elapsed=6.91 ms, json={'path': [26, 29, 13, 14, 15, 16, 17, 10, 35], 'path_names': ['田径场', '游泳馆', '集贤苑A', '集贤苑B', '集贤苑C', '集贤苑D', '集贤苑E', '学思苑I', '桃蹊饭堂'], 'distance': 363.0, 'time': 259.29}
+[PASS] Dijkstra case 10
+       route: /api/navigation
+       http: 200 (expected 200)
+       elapsed: 2.94 ms
+       json: {'path': [0], 'path_names': ['西大门'], 'distance': 0.0, 'time': 0.0}
+[PASS] Floyd case 10
+       route: /api/navigation/floyd
+       http: 200 (expected 200)
+       elapsed: 4.34 ms
+       json: {'path': [0], 'path_names': ['西大门'], 'distance': 0.0, 'time': 0.0}
+[PASS] Compare case 10
+       request: {'start': 0, 'end': 0, 'mode': 'walk', 'period': 'normal', 'strategy': 'distance'}
+       dijkstra: status=200, elapsed=2.26 ms, json={'path': [0], 'path_names': ['西大门'], 'distance': 0.0, 'time': 0.0}
+       floyd:    status=200, elapsed=4.95 ms, json={'path': [0], 'path_names': ['西大门'], 'distance': 0.0, 'time': 0.0}
+[PASS] Dijkstra invalid start
+       route: /api/navigation
+       http: 400 (expected 400)
+       elapsed: 13.01 ms
+       json: {'detail': '起点不存在: 999'}
+[PASS] Floyd invalid start
+       route: /api/navigation/floyd
+       http: 400 (expected 400)
+       elapsed: 1.95 ms
+       json: {'detail': '起点不存在: 999'}
+[PASS] health
+       route: /health
+       http: 200 (expected 200)
+       elapsed: 2.02 ms
+       json: {'status': 'ok'}
+============================================================
+Passed: 33  Failed: 0  Total: 33

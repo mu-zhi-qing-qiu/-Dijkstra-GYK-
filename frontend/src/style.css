@@ -1,0 +1,305 @@
+/* =========================================================================
+   校园智航 · 全局视觉体系
+   深色主题 / 玻璃拟态 / 渐变高亮 / 柔和阴影
+   ========================================================================= */
+
+:root {
+  /* 背景层次 */
+  --bg-0: #05070f;
+  --bg-1: #080b16;
+  --bg-2: #0c1020;
+
+  /* 玻璃表面 */
+  --surface: rgba(18, 25, 44, 0.55);
+  --surface-2: rgba(24, 33, 58, 0.6);
+  --surface-strong: rgba(20, 28, 50, 0.82);
+  --stroke: rgba(255, 255, 255, 0.08);
+  --stroke-strong: rgba(255, 255, 255, 0.16);
+
+  /* 文本 */
+  --text-0: #eaf1ff;
+  --text-1: #9db0d6;
+  --text-2: #5f6f95;
+
+  /* 主题色 */
+  --cyan: #22d3ee;
+  --blue: #3b82f6;
+  --indigo: #6366f1;
+  --violet: #8b5cf6;
+  --green: #34d399;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+
+  /* 渐变 */
+  --grad-primary: linear-gradient(135deg, #22d3ee 0%, #3b82f6 55%, #6366f1 100%);
+  --grad-ai: linear-gradient(135deg, #a78bfa 0%, #6366f1 55%, #22d3ee 100%);
+  --grad-walk: linear-gradient(135deg, #34d399, #22d3ee);
+  --grad-bike: linear-gradient(135deg, #fbbf24, #fb7185);
+  --grad-text: linear-gradient(120deg, #e9f6ff 0%, #8ec5ff 45%, #b69bff 100%);
+
+  /* 光晕与阴影 */
+  --glow-cyan: 0 0 36px rgba(34, 211, 238, 0.28);
+  --glow-violet: 0 0 36px rgba(139, 92, 246, 0.30);
+  --shadow-panel: 0 24px 60px -24px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-soft: 0 12px 30px -16px rgba(0, 0, 0, 0.6);
+
+  /* 圆角 */
+  --r-lg: 22px;
+  --r-md: 16px;
+  --r-sm: 11px;
+
+  /* 尺寸 */
+  --nav-h: 66px;
+  --gap: 16px;
+
+  --font: "Inter", "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei",
+    system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text-0);
+  background: var(--bg-0);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* 全局网格底纹 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(1100px 700px at 8% -8%, rgba(34, 211, 238, 0.10), transparent 60%),
+    radial-gradient(1000px 800px at 100% 0%, rgba(139, 92, 246, 0.12), transparent 55%),
+    radial-gradient(900px 700px at 50% 120%, rgba(59, 130, 246, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 78%);
+  opacity: 0.7;
+}
+
+#app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ---------- 共享：玻璃面板 ---------- */
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid var(--stroke);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-panel);
+}
+
+/* ---------- 共享：标题 ---------- */
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-1);
+}
+.panel-title .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  box-shadow: var(--glow-cyan);
+}
+
+/* ---------- 共享：渐变文字 ---------- */
+.grad-text {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- 共享：滚动条 ---------- */
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.35);
+  background-clip: padding-box;
+}
+
+/* ---------- 共享：按钮基类 ---------- */
+.btn {
+  appearance: none;
+  border: 1px solid var(--stroke);
+  background: var(--surface-2);
+  color: var(--text-0);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 16px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.18s ease, box-shadow 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease, opacity 0.2s ease;
+}
+.btn:hover {
+  border-color: var(--stroke-strong);
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0) scale(0.985);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-primary {
+  border: none;
+  background: var(--grad-primary);
+  color: #06121f;
+  box-shadow: 0 10px 26px -10px rgba(34, 211, 238, 0.7);
+}
+.btn-primary:hover {
+  box-shadow: 0 14px 32px -10px rgba(34, 211, 238, 0.85);
+}
+.btn-ai {
+  border: none;
+  background: var(--grad-ai);
+  color: #0c0820;
+  box-shadow: 0 10px 26px -10px rgba(139, 92, 246, 0.75);
+}
+
+/* ---------- 共享：动画关键帧 ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -180% 0;
+  }
+  100% {
+    background-position: 180% 0;
+  }
+}
+@keyframes scan {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(820%);
+    opacity: 0;
+  }
+}
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+}
+
+.anim-rise {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
