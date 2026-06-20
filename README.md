@@ -74,9 +74,9 @@ project/
 ```
 
 2、添加下面字段
-
+```json
 DEEPSEEK_API_KEY={此处连同花括号一起替换为你自己的apikey}
-
+```
 在项目根目录执行：
 
 ```bash
